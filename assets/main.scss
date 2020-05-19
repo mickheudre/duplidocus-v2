@@ -1,0 +1,32 @@
+@import '~bulma/sass/utilities/initial-variables';
+@import '~bulma/sass/utilities/functions';
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap');
+
+$duck-green: #00838A;
+$older-paper: #EEEEEC;
+
+$primary: $duck-green;
+$title-color: $primary;
+$link: $duck-green;
+$text: $duck-green;
+
+
+$family-primary: 'Open Sans';
+$title-family: 'Merriweather';
+
+$subtitle-weight: 600;
+
+$hr-height: 3px;
+
+$background: $duck-green;
+$navbar-background-color: transparent;
+$body-background-color: transparent;
+
+
+html {
+    background-image: url("./img-noise.png");
+}
+#__nuxt, #__layout {
+    height: 100%
+  }
+@import '~bulma';
