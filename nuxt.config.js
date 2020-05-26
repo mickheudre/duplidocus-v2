@@ -1,3 +1,4 @@
+import FMMode from 'frontmatter-markdown-loader/mode'
 
 export default {
   mode: 'spa',
@@ -40,7 +41,7 @@ export default {
   */
   modules: [
     // Doc: https://github.com/nuxt-community/modules/tree/master/packages/bulma
-    // '@nuxtjs/bulma'
+    '@nuxtjs/bulma'
   ],
   /*
   ** Build configuration
@@ -57,6 +58,19 @@ export default {
     ** You can extend webpack config here
     */
     extend (config, ctx) {
+      config.module.rules.push(
+        {
+          test: /\.md$/,
+          loader: 'frontmatter-markdown-loader',
+          options: {
+            mode: [FMMode.VUE_COMPONENT],
+            vue: {
+              root: 'markdown-body',
+              h4: 'title is-4'
+            }
+          }
+        }
+      )
     }
   }
 }

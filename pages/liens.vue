@@ -12,34 +12,31 @@
     </div>
     <div class="column is-1" />
     <div class="column is-4">
-      <hr class="divider">
-      <h4 class="title">
-        Duplidocus est <br>
-        un collectif <br>
-        d’impressions <br>
-        DIY & libertaires
-      </h4>
-      <hr class="divider">
-      <p class="is-size-6">
-        Nous imprimons affiches, brochures, fanzines,<br>
-        tracts, petits ouvrages en risographie. <br>
-        Nous ne sommes pas des professionnel.le.s,<br>
-        les tirages sont des moments de rencontres,<br>
-        d’échanges et de complicité.
-      </p>
+      <h5 class="title">
+        {{ title }}
+      </h5>
+      <links />
     </div>
     <div class="column is-1" />
   </div>
 </template>
 
 <script>
-// export default {
+import linkData from '~/content/links.md'
 
-// }
+export default {
+  components: {
+    links: linkData.vue.component
+  },
+  computed: {
+    title () {
+      return linkData.attributes.title
+    }
+  }
+}
 </script>
 
 <style lang="scss">
-
 .columns {
   flex: 1;
   margin: 0;
@@ -49,15 +46,6 @@
 }
 .columns:last-child {
   margin-bottom: 0;
-}
-
-.divider {
-  width: 150px;
-  margin: 0
-}
-
-.divider:last-of-type {
-  margin-bottom: 2em;
 }
 
 p {
@@ -82,6 +70,9 @@ p {
 }
 .image {
   mix-blend-mode: screen;
+}
+h6:not(:last-child) {
+  margin: 1.5rem 0 .4rem 0;
 }
 
 </style>

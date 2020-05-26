@@ -1,42 +1,22 @@
 <template>
   <div class="columns is-centered">
     <div class="column is-1" />
+    <div class="column is-4">
+      <NuxtChild :key="$route.params" />
+    </div>
+    <div class="column is-1" />
     <div class="column">
       <div class="images">
         <div class="align-right">
           <div class="image-color">
-            <img class="image" src="../assets/group.png">
+            <img class="image" src="~/assets/dupli.png">
           </div>
         </div>
       </div>
     </div>
     <div class="column is-1" />
-    <div class="column is-4">
-      <hr class="divider">
-      <h4 class="title">
-        Duplidocus est <br>
-        un collectif <br>
-        d’impressions <br>
-        DIY & libertaires
-      </h4>
-      <hr class="divider">
-      <p class="is-size-6">
-        Nous imprimons affiches, brochures, fanzines,<br>
-        tracts, petits ouvrages en risographie. <br>
-        Nous ne sommes pas des professionnel.le.s,<br>
-        les tirages sont des moments de rencontres,<br>
-        d’échanges et de complicité.
-      </p>
-    </div>
-    <div class="column is-1" />
   </div>
 </template>
-
-<script>
-// export default {
-
-// }
-</script>
 
 <style lang="scss">
 
@@ -82,6 +62,7 @@ p {
 }
 .image {
   mix-blend-mode: screen;
+  max-height: 400px;
 }
 
 </style>
