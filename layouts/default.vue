@@ -1,28 +1,41 @@
 <template>
   <div id="app-container" class="container">
-    <nav class="navbar" role="navigation" aria-label="main navigation">
+    <nav class="navbar" :class="{'is-active': showMenu}" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <nuxt-link class="navbar-item" to="/">
-          <h4 class="title is-4">
+          <h4 class="title is-4" :class="{'is-active': showMenu}">
             Duplidocus
           </h4>
         </nuxt-link>
+        <a
+          role="button"
+          class="navbar-burger burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="duplidocusNav"
+          :class="{ 'is-active': showMenu }"
+          @click="showMenu = !showMenu"
+        >
+          <span aria-hidden="true" />
+          <span aria-hidden="true" />
+          <span aria-hidden="true" />
+        </a>
       </div>
 
-      <div class="navbar-menu">
+      <div id="duplidocusNav" class="navbar-menu" :class="{ 'is-active': showMenu } ">
         <div class="navbar-end">
           <!-- <nuxt-link class="navbar-item" to="/guide">
-            <h6 class="subtitle is-6">
+            <h6 class="subtitle is-6" @click="showMenu = !showMenu">
               Guide d'impression
             </h6>
           </nuxt-link> -->
           <nuxt-link class="navbar-item" to="/evenements">
-            <h6 class="subtitle is-6">
+            <h6 class="subtitle is-6" :class="{ 'is-active': showMenu }" @click="showMenu = false">
               Evènements
             </h6>
           </nuxt-link>
           <nuxt-link class="navbar-item" to="/liens">
-            <h6 class="subtitle is-6">
+            <h6 class="subtitle is-6" :class="{ 'is-active': showMenu }" @click="showMenu = false">
               Liens
             </h6>
           </nuxt-link>
@@ -35,7 +48,17 @@
   </div>
 </template>
 
+<script>
+export default {
+  data () {
+    return {
+      showMenu: false
+    }
+  }
+}
+</script>
 <style lang="scss">
+
 #app-container {
     min-height: 100vh;
     display: flex;
@@ -45,14 +68,14 @@
   flex: 1;
   display: flex;
 }
-.navbar {
-  margin: 0 2em 0 2em;
-  padding: 8px;
-}
 
 .content-item {
   flex: 1
 }
+
+// #duplidocusNav.is-active {
+//   background-color: #00838A;
+// }
 
 a.navbar-item:hover {
     background-color: transparent;
@@ -63,4 +86,24 @@ a.navbar-item:hover {
 a.navbar-item.nuxt-link-exact-active.nuxt-link-active {
     background-color: transparent;
 }
+
+.navbar-menu {
+  box-shadow: none;
+}
+
+.is-active {
+  background-color: #00838A;
+    color: white
+}
+
+.navbar-menu.is-active {
+  position: absolute;
+  width: 100%;
+
+}
+
+.navbar-burger:hover {
+  background-color: transparent;
+}
+
 </style>

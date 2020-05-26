@@ -8,8 +8,10 @@ title: Liens
 [Le local autogéré](https://www.lustucrust.org/localautogere_presentation.html) (infoshop punk & anarchiste)  
 
 ###### Risographie
-[stencil.wiki](http://stencil.wiki/) un atlas de la risographie 
+[stencil.wiki](http://stencil.wiki/) un atlas de la risographie
+
 [Papier Machine](http://www.papiermachine.fr/)
+
 [Housework Press](http://housework.press/)
 
 ###### Pratique
