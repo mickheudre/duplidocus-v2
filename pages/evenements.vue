@@ -18,7 +18,7 @@
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 .columns {
   flex: 1;

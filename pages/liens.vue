@@ -36,7 +36,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .columns {
   flex: 1;
   margin: 0;
