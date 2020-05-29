@@ -10,8 +10,8 @@
         </div>
       </div>
     </div>
-    <div class="column is-1" />
-    <div class="column is-4">
+    <div class="column is-2" />
+    <div class="column is-3">
       <hr class="divider">
       <h4 class="title">
         Duplidocus est <br>
@@ -20,12 +20,11 @@
         DIY & libertaires
       </h4>
       <hr class="divider">
-      <p class="is-size-6">
-        Nous imprimons affiches, brochures, fanzines,<br>
-        tracts, petits ouvrages en risographie. <br>
-        Nous ne sommes pas des professionnel.le.s,<br>
-        les tirages sont des moments de rencontres,<br>
-        d’échanges et de complicité.
+      <p>
+        Nous imprimons affiches, brochures, fanzines, tracts et petits ouvrages en risographie.
+      </p>
+      <p>
+        Nous ne sommes pas des professionnel.le.s, les tirages sont des moments de rencontres, d’échanges et de complicité.
       </p>
     </div>
     <div class="column is-1" />
@@ -38,7 +37,7 @@
 // }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 .columns {
   flex: 1;
@@ -62,6 +61,7 @@
 
 p {
   line-height: 1.5em;
+  margin-bottom: 8px;
 }
 
 .images {
