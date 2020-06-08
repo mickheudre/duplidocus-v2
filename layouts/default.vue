@@ -39,6 +39,11 @@
               Liens
             </h6>
           </nuxt-link>
+          <nuxt-link class="navbar-item  cta" to="/contact">
+            <h6 class="subtitle is-6" :class="{ 'is-active': showMenu }" @click="showMenu = false">
+              Nous Contacter
+            </h6>
+          </nuxt-link>
         </div>
       </div>
     </nav>
@@ -69,13 +74,14 @@ export default {
   display: flex;
 }
 
+.cta {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
 .content-item {
   flex: 1
 }
-
-// #duplidocusNav.is-active {
-//   background-color: #00838A;
-// }
 
 a.navbar-item:hover {
     background-color: transparent;
@@ -93,7 +99,7 @@ a.navbar-item.nuxt-link-exact-active.nuxt-link-active {
 
 .is-active {
   background-color: #00838A;
-    color: white
+  color: #EEEEEC
 }
 
 .navbar-menu.is-active {
@@ -104,6 +110,10 @@ a.navbar-item.nuxt-link-exact-active.nuxt-link-active {
 
 .navbar-burger:hover {
   background-color: transparent;
+}
+
+h6:not(:last-child) {
+  margin: 1.5em 0 .5em 0;
 }
 
 </style>

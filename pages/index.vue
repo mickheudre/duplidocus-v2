@@ -14,10 +14,7 @@
     <div class="column is-3">
       <hr class="divider">
       <h4 class="title">
-        Duplidocus est <br>
-        un collectif <br>
-        d’impressions <br>
-        DIY & libertaires
+        Duplidocus <br> est un collectif d’impressions DIY & libertaires
       </h4>
       <hr class="divider">
       <p>
