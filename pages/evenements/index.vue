@@ -1,14 +1,23 @@
 <template>
   <div>
-    <h5 class="title">
+      <h5 class="title">
+        Evénements
+      </h5>
+    <div class="event-category">
+    <Event v-for="event in nextEvents" :key="event.id" v-bind="{id: event.id, ...event.data}" />
+    </div>
+    <div class="event-category">
+    <h5 class="title is-5">
       Événements passés
     </h5>
-    <Event v-for="event in events" :key="event.id" v-bind="{id: event.id, ...event.data}" />
+    <Event v-for="event in pastEvents" :key="event.id" class="event" v-bind="{id: event.id, ...event.data}" />
+    </div>
   </div>
 </template>
 
 <script>
 import Event from '~/components/event'
+const moment = require('moment')
 
 export default {
   name: 'Liens',
@@ -18,6 +27,14 @@ export default {
   data () {
     return {
       events: []
+    }
+  },
+  computed: {
+    pastEvents () {
+      return this.events.filter(event => (moment() > moment(event.id.substring(1, 12))))
+    },
+    nextEvents () {
+      return this.events.filter(event => (moment() <= moment(event.id.substring(1, 12))))
     }
   },
   mounted () {
@@ -32,6 +49,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.title.is-5:not(:last-child) {
+  margin: 2.5em 0 1em 0;
+}
 
 .columns {
   flex: 1;
@@ -63,10 +84,6 @@ p {
   flex: 1;
 }
 
-.title:not(:last-child){
-  margin: .4em 0;
-}
-
 .image-color {
   background-color: #00838A;
   mix-blend-mode: multiply;
@@ -76,6 +93,10 @@ p {
 .image {
   mix-blend-mode: screen;
   max-height: 400px;
+}
+
+.event {
+margin: 1em 0;
 }
 
 </style>

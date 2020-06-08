@@ -1,16 +1,14 @@
 <template>
   <div>
-    <h6>{{ date }}</h6>
+    <span>{{ date }}</span>
     <nuxt-link :to="`evenements/${id}`">
-      <h6 class="has-text-weight-semibold">
+      <h6 class="subtitle is-6 has-text-weight-semibold">
         {{ name }}
       </h6>
     </nuxt-link>
-    <h7 class="is-size-7">
+    <span class="is-italic">
       {{ description }}
-    </h7>
-    <br>
-    <br>
+    </span>
   </div>
 </template>
 
