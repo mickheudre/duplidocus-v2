@@ -1,54 +1,39 @@
 <template>
-  <div class="columns is-centered">
-    <div class="column is-1" />
-    <div class="column">
-      <div class="images">
-        <div class="align-right">
-          <div class="image-color">
-            <img class="image" src="../assets/group.png">
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="column is-1" />
-    <div class="column is-4">
-      <hr class="divider">
-      <h4 class="title">
-        Duplidocus est <br>
-        un collectif <br>
-        d’impressions <br>
-        DIY & libertaires
-      </h4>
-      <hr class="divider">
-      <p class="is-size-6">
-        Nous imprimons affiches, brochures, fanzines,<br>
-        tracts, petits ouvrages en risographie. <br>
-        Nous ne sommes pas des professionnel.le.s,<br>
-        les tirages sont des moments de rencontres,<br>
-        d’échanges et de complicité.
-      </p>
-    </div>
-    <div class="column is-1" />
+  <div class="is-centered">
+    <GuideChapter file="intro.md" />
+    <GuideChapter id="riso" file="part1.md" class="row-reverse" />
+    <GuideChapter id="defauts" file="part2.md" />
+    <GuideChapter id="format" file="part3.md" class="row-reverse" />
+    <GuideChapter id="préparation" file="part4.md" />
+    <GuideChapter id="prix" file="part5.md" class="row-reverse" />
   </div>
 </template>
 
 <script>
-// export default {
+import GuideChapter from '~/components/GuideChapter'
 
-// }
+export default {
+  components: {
+    GuideChapter
+  }
+}
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 .columns {
   flex: 1;
   margin: 0;
   justify-content: center;
   align-items: center;
-  flex-direction: row-reverse;
+  min-height: 100vh;
 }
-.columns:last-child {
-  margin-bottom: 0;
+
+.row {
+  flex-direction: row;
+}
+.row-reverse {
+  flex-direction: row-reverse;
 }
 
 .divider {

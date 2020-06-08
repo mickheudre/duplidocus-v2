@@ -35,6 +35,17 @@ html {
 title:not(:last-child) {
   margin-bottom: .5rem;
 }
+h3 {
+  @extend .title;
+  @extend .is-3;
+  margin: 1rem 0 0 0;
+}
+
+h5 {
+  @extend .title;
+  @extend .is-5;
+  margin: 1rem 0 0 0;
+}
 
 h6 {
   @extend .subtitle;

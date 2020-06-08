@@ -24,11 +24,11 @@
 
       <div id="duplidocusNav" class="navbar-menu" :class="{ 'is-active': showMenu } ">
         <div class="navbar-end">
-          <!-- <nuxt-link class="navbar-item" to="/guide">
-            <h6 class="subtitle is-6" @click="showMenu = !showMenu">
+          <nuxt-link class="navbar-item" to="/guide">
+            <h6 class="subtitle is-6" :class="{ 'is-active': showMenu }" @click="showMenu = false">
               Guide d'impression
             </h6>
-          </nuxt-link> -->
+          </nuxt-link>
           <nuxt-link class="navbar-item" to="/evenements">
             <h6 class="subtitle is-6" :class="{ 'is-active': showMenu }" @click="showMenu = false">
               Evènements
