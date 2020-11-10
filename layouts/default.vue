@@ -34,6 +34,11 @@
               Evènements
             </h6>
           </nuxt-link>
+          <nuxt-link class="navbar-item" to="/gragenda">
+            <h6 class="subtitle is-6" :class="{ 'is-active': showMenu }" @click="showMenu = false">
+              Gragenda
+            </h6>
+          </nuxt-link>
           <nuxt-link class="navbar-item" to="/liens">
             <h6 class="subtitle is-6" :class="{ 'is-active': showMenu }" @click="showMenu = false">
               Liens
@@ -64,6 +69,9 @@ export default {
 </script>
 <style lang="scss">
 
+.navbar {
+  padding-top: 1.5em;
+}
 #app-container {
     min-height: 100vh;
     display: flex;
@@ -74,13 +82,17 @@ export default {
   display: flex;
 }
 
-.cta {
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-}
+// .cta {
+//   border-bottom: 2px solid;
+// }
 
 .content-item {
   flex: 1
+}
+
+.navbar-item {
+  margin-left: 1em;
+  // margin-right: 1em;
 }
 
 a.navbar-item:hover {

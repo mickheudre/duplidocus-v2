@@ -26,7 +26,7 @@ export default {
   margin: 0;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  margin: 8em 0;
 }
 
 .row {

@@ -13,9 +13,9 @@
     <div class="column is-2" />
     <div class="column is-3">
       <hr class="divider">
-      <h4 class="title">
+      <h1 class="title">
         Duplidocus <br> est un collectif d’impressions DIY & libertaires
-      </h4>
+      </h1>
       <hr class="divider">
       <p>
         Nous imprimons affiches, brochures, fanzines, tracts et petits ouvrages en risographie.
