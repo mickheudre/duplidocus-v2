@@ -3,7 +3,7 @@ title: Le Gragenda
 ---
 
 Le Gragenda est un agenda annuel fabriqué par nos soins qui permet de nous financer,
-l'intérieur est imprimée en riso et la couverture en sérigraphie et vendu à prix libre.
+l'intérieur est imprimé en riso et la couverture en sérigraphie. Le Gragenda est vendu à prix libre.
 
 
 Les points de distribution à grenoble :
@@ -14,3 +14,4 @@ Les points de distribution à grenoble :
 - **bar à l'ouest**, 5 place sainte claire
 - **bar le saint bruno**, 22 place saint bruno
 - **le café-vélo**, 59 rue nicolas chorier
+- **librairie les modernes**, 6 rue lakanal
